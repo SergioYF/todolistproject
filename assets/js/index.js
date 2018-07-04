@@ -6,7 +6,7 @@ require('./style.css');
 function T(title, expired_date) {
 	this.title = title;
 	this.completed = false;
-	this.detail = "";
+	this.detail = "No detail.";
 	this.priority = 2;
 	this.expired_date = expired_date;
 	this.click = false;
@@ -84,7 +84,6 @@ var TypeNew = React.createClass({
 		e.preventDefault();
 		var tet = this.refs.content.value.trim();
 		var dat = this.refs.date.value.trim();
-		// alert(dat);
 		var todo = new T(tet, dat);
 		if (tet != '') {
 			var new_length = this.props.todos.push(todo);
@@ -195,14 +194,10 @@ var ListTodo = React.createClass({
 				i = j;
 			}
 		};
-		// alert("i = "+i);
 		var tet = document.getElementById("textarea").value;
 		var dat = this.refs.date.value.trim();
 		var pri = this.refs.priority.value.trim();
-		// alert(dat);
 		var todos = this.props.todos;
-		// var data_real = todos[i].expired_date;
-		// alert(data_real);
 		if (dat !== '') {
 			todos[i].expired_date = dat;
 		}
@@ -226,7 +221,6 @@ var ListTodo = React.createClass({
 				} else {
 					var start_date = "今天";
 				}
-				// alert(start_date);
 				if (todo.completed === true && todo.click === true) {
 					return React.createElement(
 						'li',

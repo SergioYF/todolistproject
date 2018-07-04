@@ -19,4 +19,3 @@ pip install -r requirement.txt
 bash ./start.sh
 # then open http://127.0.0.1:8000
 ```
-### GIF截图在./video文件夹中
