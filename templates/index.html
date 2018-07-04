@@ -1,0 +1,11 @@
+{% load render_bundle from webpack_loader %}
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Todo List</title>
+	</head>
+	<body>
+        <div id="container" style="width: 430px; margin: 100px auto;"></div>
+        {% render_bundle 'main' %}
+	</body>
+</html>
